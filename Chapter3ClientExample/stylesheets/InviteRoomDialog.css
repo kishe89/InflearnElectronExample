@@ -1,0 +1,39 @@
+.inviteRoomDialog{
+    position: absolute;
+    display: block;
+    width: 400px;
+    height: 300px;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 4px;
+    box-shadow: 0px 0px 8px 4px #555555;
+    background: #333333;
+}
+
+.inviteRoomDialog input{
+    position: absolute;
+    display: block;
+    top:40%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 80%;
+    margin: 0px auto 0px;
+    background: #aaaaaa;
+    border-style: none;
+    box-shadow: 0px 0px 1px 1px #ffffff;
+    color: #333333;
+    height: 30px;
+}
+
+.inviteRoomDialog p{
+    margin: 0;
+    padding-top: 10%;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    color: #aaaaaa;
+}

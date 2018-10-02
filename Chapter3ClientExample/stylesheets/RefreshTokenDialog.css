@@ -1,0 +1,36 @@
+.refreshTokenDialog{
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    background: #888888;
+}
+
+.refreshTokenDialog p{
+    position: absolute;
+    background: #888888;
+    top:calc(100% - 16px);
+    width: 100%;
+    height: 16px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.loader{
+    width: 50%;
+    height: 50%;
+    display: block;
+    margin: auto;
+    position: relative;
+    top:calc(25% - 52px);
+    border: 52px solid #f3f3f3;
+    border-top: 52px solid #3498db;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}

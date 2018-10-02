@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+    <link rel="stylesheet" href="stylesheets/init.css">
+    <link rel="stylesheet" href="stylesheets/roomArea.css">
+    <link rel="stylesheet" href="stylesheets/roomMenuArea.css">
+    <link rel="stylesheet" href="stylesheets/chatArea.css">
+    <link rel="stylesheet" href="stylesheets/DialogWrapper.css">
+    <link rel="stylesheet" href="stylesheets/InviteRoomDialog.css">
+    <link rel="stylesheet" href="stylesheets/DialogButton.css">
+    <link rel="stylesheet" href="stylesheets/LeaveRoomDialog.css">
+    <link rel="stylesheet" href="stylesheets/CreateRoomDialog.css">
+    <link rel="stylesheet" href="stylesheets/FriendMenuDialog.css">
+    <link rel="stylesheet" href="stylesheets/AddFriendDialog.css">
+    <link rel="stylesheet" href="stylesheets/ElementLoader.css">
+    <link rel="stylesheet" href="stylesheets/ListFriendDialog.css">
+    <link rel="stylesheet" href="stylesheets/ListFriendRequestDialog.css">
+    <link rel="stylesheet" href="stylesheets/RefreshTokenDialog.css">
+    <title>FirstExample.</title>
+</head>
+<body>
+    <div class="roomArea" id="roomArea">
+        <div class="profile" id="profile">kishe56@gmail.com</div>
+        <div class="openFriendMenuButton" id="openFriendMenuButton">친구메뉴</div>
+        <ul class="roomList" id="roomList">
+            <li class="roomButton" id="134nk234">room1</li>
+            <li class="roomButton" id="134nk235">room2</li>
+        </ul>
+        <div class="createRoomButton" id="createRoomButton">방생성</div>
+    </div>
+    <div class="roomMenuArea">
+        <ul class="roomMenu" id="roomMenu">
+            <li><div class="button" id="inviteRoomButton">초대</div></li>
+            <li><div class="button" id="leaveRoomButton">나가기</div></li>
+        </ul>
+    </div>
+    <div class="chatAreaWrapper">
+        <div class="chatArea">
+            <ul class="messageList" id="messageList">
+                <li class="messageElement" id="object1">
+                    <div>
+                        <p class="messageElementProfile">kishe56@gmail.com</p>
+                        <p class="messageElementDate">2018-03-21 14:32:22</p>
+                        <div class="messageElementReSendButton">재전송</div>
+                        <p class="messageContent">안녕하세요. 첫 메시지</p>
+
+                    </div>
+                </li>
+                <li class="messageElement" id="object2">
+                    <div>
+                        <p class="messageElementProfile">kishe56@gmail.com</p>
+                        <p class="messageElementDate">2018-03-21 15:34:22</p>
+                        <div class="messageElementReSendButton">재전송</div>
+                        <p class="messageContent">안녕하세요. 두번째 메시지</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="chatAreaInputWrapper">
+            <textarea class="messageTextArea" placeholder="메시지를 입력하세요." id="messageTextArea"></textarea>
+            <div class="sendMessageButton" id="sendMessageButton">전송</div>
+        </div>
+    </div>
+    <div class="DialogWrapper" id="inviteRoomDialogWrapper">
+        <div class="inviteRoomDialog">
+            <p>초대할 유저의 아이디를 입력해주세요.</p>
+            <input type="email" placeholder="example@example.com" id="input-userId">
+            <div class="Dialog-button confirmButton" id="inviteConfirmButton">확인</div>
+            <div class="Dialog-button cancelButton" id="inviteCancelButton">취소</div>
+        </div>
+    </div>
+    <div class="DialogWrapper" id="leaveRoomDialogWrapper">
+        <div class="leaveRoomDialog">
+            <p>방을 나가시겠습니까?</p>
+            <div class="Dialog-button confirmButton" id="leaveConfirmButton">확인</div>
+            <div class="Dialog-button cancelButton" id="leaveCancelButton">취소</div>
+        </div>
+    </div>
+    <div class="DialogWrapper" id="createRoomDialogWrapper">
+        <div class="createRoomDialog">
+            <p>생성할 방 이름을 입력해주세요.</p>
+            <input type="text" placeholder="방 이름을 입력하세요." id="input-roomName">
+            <div class="Dialog-button confirmButton" id="createConfirmButton">확인</div>
+            <div class="Dialog-button cancelButton" id="createCancelButton">취소</div>
+        </div>
+    </div>
+    <div class="DialogWrapper" id="friendMenuDialogWrapper">
+        <div class="friendMenuDialog">
+            <p>친구 기능</p>
+            <ul class="friendMenuList" id="friendMenuList">
+                <li class="friendMenu" id="addFriend">친구 추가</li>
+                <li class="friendMenu" id="showFriends">친구 리스트</li>
+                <li class="friendMenu" id="requestFriend">친구 요청</li>
+            </ul>
+            <div class="friendMenuDialog-button" id="closeFriendMenuDialogButton">닫기</div>
+        </div>
+    </div>
+    <div class="DialogWrapper depth2" id="addFriendDialogWrapper">
+        <div class="addFriendDialog">
+            <p class="addFriendDialog-title">친구 추가</p>
+            <input type="text" placeholder="친구아이디를 입력하세요." id="input-friendId">
+            <div class="searchUserButton" id="searchUserButton">검색</div>
+            <div class="searchUserResult">
+                <p id="searchUserResult">검색결과가 없습니다.</p>
+                <div class="addElementLoader" id="addElementLoader"></div>
+            </div>
+            <div class="Dialog-button confirmButton" id="addFriendConfirmButton">요청</div>
+            <div class="Dialog-button cancelButton" id="addFriendCancelButton">취소</div>
+        </div>
+    </div>
+    <div class="DialogWrapper depth2" id="listFriendDialogWrapper">
+        <div class="listFriendDialog">
+            <p class="listFriendDialog-title">친구 목록</p>
+            <ul class="friendList" id="friendList">
+                <li class="friendElement">
+                    <p class="friendId">kishe56@gmail.com</p>
+                    <button class="cancelFriendShipButton">친구삭제</button>
+                    <div class="elementLoader"></div>
+                </li>
+            </ul>
+            <div class="friendMenuDialog-button" id="listCancelButton">닫기</div>
+        </div>
+    </div>
+    <div class="DialogWrapper depth2" id="listFriendRequestDialogWrapper">
+        <div class="listFriendRequestDialog">
+            <p class="listFriendRequestDialog-title">친구 요청 목록</p>
+            <ul class="friendRequestList" id="friendRequestList">
+                <li class="requestElement">
+                    <p class="requestFriendId">kishe89@gmail.com</p>
+                    <button class="FriendShipButton" value="1">수락</button>
+                    <button class="FriendShipButton" value="0">거절</button>
+                    <div class="elementLoader"></div>
+                </li>
+            </ul>
+            <div class="friendMenuDialog-button" id="listFriendCloseButton">닫기</div>
+        </div>
+    </div>
+    <div class="DialogWrapper depthTop" id="refreshTokenDialogWrapper">
+        <div class="refreshTokenDialog">
+            <p>토큰을 갱신중입니다.</p>
+            <div class="loader"></div>
+        </div>
+    </div>
+</body>
+<script src="./webScripts/main.js"></script>
+</html>

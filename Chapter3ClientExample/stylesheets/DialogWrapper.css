@@ -1,0 +1,43 @@
+.DialogWrapper{
+    position:fixed;
+    display: none;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 3;
+}
+
+.DialogWrapper.show{
+    display: block;
+}
+
+.DialogWrapper.depth2{
+    position:fixed;
+    display: none;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0);
+    z-index: 4;
+}
+
+.DialogWrapper.depth2.show{
+    display: block;
+}
+
+.DialogWrapper.depthTop{
+    position:fixed;
+    display: none;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0);
+    z-index: 10;
+}
+.DialogWrapper.depthTop.show{
+    display: block;
+}

@@ -1,0 +1,83 @@
+.friendMenuDialog{
+    position: absolute;
+    display: block;
+    width: 400px;
+    height: 300px;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 4px;
+    box-shadow: 0px 0px 8px 4px #555555;
+    background: #333333;
+}
+
+.friendMenuDialog p{
+    margin: 0;
+    padding-top: 5%;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    color: #aaaaaa;
+}
+
+.friendMenuDialog-button{
+    float: left;
+    top:calc(100% - 75px);
+    left:calc(50% - 50px);
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 4px;
+    border: 1px slategray;
+    box-shadow: 0px 0px 1px 1px #444444;
+    background: #555555;
+    color: #aaaaaa;
+    transition: backgroud 0.5s;
+}
+.friendMenuDialog-button:hover{
+    background: #777777;
+}
+.friendMenuDialog-button:active{
+    background: #222222;
+}
+
+.friendMenuList{
+    overflow: scroll;
+    list-style: none;
+    margin: auto 0;
+    height: calc(100% - 140px);
+    width: 100%;
+    padding: 0;
+}
+
+.friendMenu{
+    width: calc(80% - 8px);
+    height: 30px;
+    margin: 5px auto 5px;
+    border-radius: 0px;
+    border: solid #aaaaaa;
+    background: #bbbbbb;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    color: #333333;
+    transition: background 0.4s, border-radius 0.5s;
+}
+
+.friendMenu:hover{
+    border-radius: 4px;
+    background: #eeeeee;
+}
+.friendMenu:active{
+    border-radius: 18x;
+    background: #777777;
+}
+.friendMenu.selected{
+    border-radius: 18x;
+    background: #777777;
+}

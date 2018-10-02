@@ -1,0 +1,41 @@
+.roomMenuArea{
+    display: block;
+    position: relative;
+    width: calc(100% - 120px);
+    height: 82px;
+    margin-left: 120px;
+    align-content: center;
+    background: #333333;
+}
+
+.roomMenu{
+    display: block;
+    height: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.roomMenu li{
+    float: left;
+    width: 100px;
+    height: 100%;
+    margin: 0 16px 0;
+}
+
+.button{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    height: 100%;
+    line-height: 82px;
+    color: #ffffff;
+}
+.roomMenu li .button:hover{
+    background: #555555;
+}
+.roomMenu li .button:active{
+    background: #888888;
+}
